@@ -26,15 +26,15 @@ module Tictactoe
     end
 
     def winner?
-      winning_positions.each do |winning_posistion|
-        next if winning_posistion_values(winning_position).all_empty?
+      winning_positions.each do |winning_position|
+        next if winning_position_values(winning_position).all_empty?
         return true if winning_position_values(winning_position).all_same?
       end
       false
     end
 
     def winning_position_values(winning_position)
-      winning_position.map { |cell| cell.value } 
+      winning_position.map { |cell| cell.value }
     end
 
     private
